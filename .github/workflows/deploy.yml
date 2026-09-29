@@ -22,7 +22,8 @@ jobs:
         uses: actions/checkout@v7
       - name: Install, build, and upload your site
         uses: withastro/action@v6
-        env: PUBLIC_MAPS_API_KEY=${{ vars.PUBLIC_MAPS_API_KEY }}
+        env:
+          PUBLIC_MAPS_API_KEY: '${{ vars.PUBLIC_MAPS_API_KEY }}'
 
   deploy:
     needs: build
